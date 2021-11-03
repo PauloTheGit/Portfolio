@@ -3,34 +3,50 @@
 <head>
 	<title>Personal Portfolio</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="port.css">
 </head>
 <body>
-
+<section class= "top">
 	<header>
 		<h1>Paulo's Portfolio</h1>
 	</header>
 	<nav>
 		<ul>
 			<li>
-				Home
+				<a href="index.html">Home</a>
 			</li>
 			<li>
-				Contact
+				<a href="contact.html">Contact</a>
 			</li>
 		</ul>
 	</nav>
-	<hr>
+</section>
+	
 	<main>
-		<section class="intro"><img src="Paul.jpg" height="300" width="230" alt="Picture of Paulo">
+		<section class="intro">
 		<h2>About Me</h2>
 		<p>Hello. My Name is Paulo Ndawula and I'm a Kent based budding web developer. I am currently learning HTML, JavaScript and Python with the aim of becoming a full-stack developer.</p>
 		</section>
+		<p>Click image to change the Paulo!</p>
+		<img id="alternate" onclick="changeImage()" src="Paul.jpg" height="300" width="230" alt="Picture of Paulo">
 		<section class="projects">
 			<h2>Projects</h2>
 			<p>Pending...</p>
 		</section>
 	</main>
-	<footer></footer>
-
+	<footer>
+		<p>Thank you for visiting my page!</p>
+	</footer>
+<script>
+	function changeImage() {
+		let image = document.getElementById('alternate');
+		if(image.src.match("Paul.jpg")) {
+			image.src="Paul2.jpg"
+		}
+		else{
+			image.src="Paul.jpg"
+		}
+	}
+</script>
 </body>
 </html>
